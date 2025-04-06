@@ -20,7 +20,7 @@ public class LambdaApiGateway implements RequestHandler<APIGatewayProxyRequestEv
 
         final LambdaLogger  logger = context.getLogger();
         logger.log(" API full log event "+ apiGatewayProxyRequestEvent.toString());
-
+    
         String body = apiGatewayProxyRequestEvent.getBody();
         final User user = gson.fromJson(body, User.class);
 
@@ -50,7 +50,6 @@ public class LambdaApiGateway implements RequestHandler<APIGatewayProxyRequestEv
 
     public APIGatewayProxyResponseEvent apiResponseMethod(int status, String errorCode,
                                                           String errorMessage, String responseBody,
-
                                                           LambdaLogger logger) {
 
         Error error = new Error();

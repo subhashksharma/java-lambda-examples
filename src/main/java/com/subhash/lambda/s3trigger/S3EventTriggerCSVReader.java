@@ -1,4 +1,4 @@
-package com.subhash.lambda.s3tigger;
+package com.subhash.lambda.s3trigger;
 
 import com.amazonaws.auth.DefaultAWSCredentialsProviderChain;
 import com.amazonaws.services.lambda.runtime.Context;
@@ -16,7 +16,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.nio.charset.StandardCharsets;
 
-public class S3EventTriggerCVSReader implements RequestHandler<S3Event, Boolean> {
+public class S3EventTriggerCSVReader implements RequestHandler<S3Event, Boolean> {
 
     private static final AmazonS3 s3Client = AmazonS3Client.builder()
             .withCredentials(new DefaultAWSCredentialsProviderChain())
